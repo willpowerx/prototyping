@@ -1,0 +1,102 @@
+/*Consonant webflow simplified typeography media queries*/ 
+
+/* phone breakpoint 360-599px */
+@media (max-width: 599px) {
+
+/* Consonant Type WIP 1/28/21 */
+
+.h1 {
+  margin-bottom: 7px;
+  font-size: 28px;
+}
+
+
+.h2 {
+  margin-bottom: 6px;
+  font-size: 24px;
+}
+  
+.h3 {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.h4 {
+  margin-bottom: 4.5px;
+  font-size: 18px;
+}
+
+.h5 {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.h6 {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+/*tshirt headings*/
+
+.heading-xxxl {
+  margin-bottom: 11px;
+  font-size: 44px !important;
+  line-height: 55px;
+    }
+    
+.heading-xxl {
+  margin-bottom: 9px;
+  font-size: 36px;
+  line-height: 45px;
+      }
+      
+.heading-xl {
+  margin-bottom: 7px;
+  font-size: 28px;
+  line-height: 35px;
+      }
+      
+.heading-l {
+  margin-bottom: 6px;
+  font-size: 24px;
+  line-height: 30px;
+      }
+         
+.heading-m {
+  margin-bottom: 5px;
+  font-size: 20px;
+  line-height: 25px;
+      }
+      
+.heading-m {
+  margin-bottom: 5px;
+  font-size: 20px;
+  line-height: 25px;
+    }
+    
+.heading-s {
+  font-size: 18px;
+  line-height: 22.5px;
+      }
+      
+.heading-xs {
+  margin-bottom: 4px;
+  font-size: 16px;
+  line-height: 20px;
+      }     
+
+
+}
+
+/* tablet breakpoint */
+@media (min-width: 600px) and (max-width: 1199px) {
+  .heading-xxxl {
+      margin-top: 0px;
+      margin-bottom: 20px;
+      font-family: adobe-clean;
+      color: #2c2c2c;
+      font-size: 80px;
+      line-height: 88px;
+    }
+
+}
