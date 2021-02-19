@@ -20,15 +20,8 @@ can minfy final files or even host via github etc and link in to clean up page l
 github and jsdeliver. Simply create a free account on github, create a depository and upload your file, then reference it with jsdeliver.
 
 
-
-
-
-
 */
 
-<link rel="stylesheet" type ="text/css" href="https://cdn.jsdelivr.net/gh/willpowerx/prototyping/css/consonant-adobe-clean.css">
-
-<style>
 /*temp remove badge*/
 .w-webflow-badge {
   visibility: hidden !important;
@@ -523,11 +516,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   
  
 }
-</style>
-
 
 /*END Consonant webflow simplified media queries*/ 
-
-
 
 
