@@ -20,6 +20,13 @@ can minfy final files or even host via github etc and link in to clean up page l
 github and jsdeliver. Simply create a free account on github, create a depository and upload your file, then reference it with jsdeliver.
 
 
+
+
+
+
+
+
+
 */
 
 /*temp remove badge*/
@@ -168,20 +175,30 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     justify-self: stretch;
 }*/
 
-
   ._4-card-grid-container {
     max-width: 100%;
     margin-right: 0px;
     margin-left: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
-    justify-content: stretch;
+    justify-content: center;
     justify-items: center;
     align-items: center;
+    align-content: stretch;
     grid-auto-flow: row;
     grid-column-gap: 16px;
     grid-template-areas: ".";
-    grid-template-columns: minmax(0px, 378px);
+    grid-template-columns: repeat(auto-fit, minmax(0px, 378px));
+    grid-template-rows: auto auto auto auto;
+  }
+
+  ._4-card-grid-container._378-max-width {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 378px));
     grid-template-rows: auto auto auto auto;
   }
   
@@ -322,10 +339,21 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   
   ._4-card-grid-container {
     max-width: none;
+    justify-items: stretch;
+    align-items: stretch;
     align-self: stretch;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
   }
+  
+
+  ._4-card-grid-container._378-max-width {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: auto auto;
+  }
+  
 
   .con-ps-card-container {
     min-width: 0px;
@@ -477,6 +505,13 @@ github and jsdeliver. Simply create a free account on github, create a depositor
       "Area-3 Area-4";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+  }
+
+  
+  ._4-card-grid-container._378-max-width {
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
   }
 
   .con-ps-card-container: {
