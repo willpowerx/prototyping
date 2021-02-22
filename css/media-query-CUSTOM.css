@@ -7,7 +7,7 @@ webflow breakpoint translations
 478px and down default (all styles must be added to a 599 media query) style = tiny*
 
 
-margins- 8.3 - {container 83.4} - 8.3
+margins- 8.3 - {container 83.4} - 8.3 continare is just 1200px full or 83.3%
 360–599px
 600–1199px
 1200–1440px
@@ -20,11 +20,7 @@ can minfy final files or even host via github etc and link in to clean up page l
 github and jsdeliver. Simply create a free account on github, create a depository and upload your file, then reference it with jsdeliver.
 
 
-
-
-
-
-
+may need to force the order of cards in media query still... testing
 
 
 */
@@ -65,56 +61,59 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     object-fit: contain;
   }
 
-  .riverflow-left {
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-  
-  ._2-card-grid-uneven-container-left {
-    max-width: 100%;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    justify-content: stretch;
-    align-items: stretch;
-    grid-auto-flow: row;
-    grid-column-gap: 16px;
-    grid-template-areas: ".";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-  }
-  
   .riveflow-container {
     max-width: 100%;
     min-width: 0px;
   }
-  
-  
-  .riverflow-right {
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
+
+  ._2-card-grid-uneven-container-left  {
+    max-width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    grid-auto-flow: row;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-areas: "Area"
+      "Area-2";
+    grid-template-columns: repeat(auto-fit, minmax(200px, 590px));
+    grid-template-rows: auto auto;
   }
-  
-  ._2-card-grid-uneven-container-right {
+
+  ._2-card-grid-uneven-container-right  {
+    max-width: 100%;
+    justify-content: stretch;
+    align-items: stretch;
+    grid-auto-flow: row;
+    grid-column-gap: 16px;
+    grid-template-areas: "Area"
+      "Area-2";
+    grid-template-columns: repeat(auto-fit, minmax(200px, 590px));
+    grid-template-rows: auto auto;
+  }
+
+  .hero-2-card-grid-uneven-container-simple  {
     max-width: 100%;
     margin-right: 0px;
     margin-left: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
-    justify-content: stretch;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
     grid-auto-flow: row;
     grid-column-gap: 16px;
-    grid-template-areas: "Area Area";
-    grid-template-columns: 1fr;
+    grid-template-areas: ".";
+    grid-template-columns: repeat(auto-fit, minmax(200px, 378px));
     grid-template-rows: auto auto;
   }
   
+  .hero-img-container  {
+    max-width: 100%;
+    min-width: 0px;
+  }
 
-  ._2-card-grid-container {
+  ._1-card-grid-center-container  {
     max-width: 100%;
     margin-right: 0px;
     margin-left: 0px;
@@ -125,12 +124,27 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     grid-auto-flow: row;
     grid-column-gap: 16px;
     grid-template-areas: "Area"
+      "Area-2";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
+    grid-template-rows: auto;
+  }
+  
+  ._2-card-grid-container  {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-auto-flow: row;
+    grid-template-areas: "Area"
       "Area-2"
       "Area-3"
       "Area-4";
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
     grid-template-rows: auto auto auto auto;
-  }
+  }  
 
   .simple-card-container {
     max-width: 100%;
@@ -142,114 +156,41 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     min-height: auto;
   }
 
-  ._3-card-grid-container {
-    max-width: 100%;
-    min-width: auto;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    justify-content: stretch;
-    justify-items: stretch;
-    align-items: stretch;
-    grid-auto-flow: row;
-    grid-column-gap: 16px;
-    grid-template-areas: ".";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    
-  }
-  
-  .ps-app-card-container {
-    max-width: 100%;
-    min-width: 0px;
-  }
-
-  /*ps-app custom webflow grid id*/
-  /*#w-node-efb9204a-d1c3-81db-c51b-339b6821b4eb-965f3beb {
-    -ms-grid-column: span 2;
-    grid-column-start: span 2;
-    -ms-grid-column-span: 2;
-    grid-column-end: span 2;
-    -ms-grid-column-align: stretch;
-    justify-self: stretch;
-}*/
-
-  ._4-card-grid-container {
+  ._4-card-mason-grid-container  {
     max-width: 100%;
     margin-right: 0px;
     margin-left: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
     justify-content: center;
-    justify-items: center;
     align-items: center;
-    align-content: stretch;
     grid-auto-flow: row;
-    grid-column-gap: 16px;
     grid-template-areas: ".";
-    grid-template-columns: repeat(auto-fit, minmax(0px, 378px));
-    grid-template-rows: auto auto auto auto;
-  }
-
-  ._4-card-grid-container._378-max-width {
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    grid-auto-flow: row;
-    grid-auto-columns: 1fr;
     grid-template-columns: repeat(auto-fit, minmax(100px, 378px));
     grid-template-rows: auto auto auto auto;
   }
-  
-  .con-ps-card-container {
-    max-width: 100%;
-    min-width: 0px;
-  }
-  
-  ._4-card-mason-grid-container {
-    max-width: 100%;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    justify-content: stretch;
-    align-items: stretch;
-    grid-auto-flow: row;
-    grid-column-gap: 16px;
-    grid-template-areas: ".";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-  }
-  
+
   .discover-card-container {
     max-width: 100%;
     min-width: 0px;
   }
   
-  .Block:local-styles {
-    grid-column-end: 4;
-    grid-column-start: 1;
-    grid-row-end: 2;
-    grid-row-start: 1;
-  }
-    
-  .grid-9-3 {
+  .grid-9-3  {
     grid-template-areas: "Area"
       "Area-2";
     grid-template-columns: 2fr;
     grid-template-rows: auto auto;
   }
   
-  .discover-card-hero-img-mask {
+  .discover-card-hero-img-mask  {
     height: 100%;
-    min-height: 100%;
+    min-height: 275px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
-  
+
   .hero-card-container {
     display: none;
   }
@@ -258,7 +199,49 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     display: block;
   }
 
- 
+  ._3-card-grid-container  {
+    max-width: 100%;
+    min-width: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-auto-flow: row;
+    grid-template-areas: "Area"
+      "Area-2"
+      "Area-3";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 378px));
+    grid-template-rows: auto auto auto;
+  }
+
+  .ps-app-card-container {
+    max-width: 100%;
+    min-width: 0px;
+  }
+  
+  ._4-card-grid-container  {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: stretch;
+    grid-auto-flow: row;
+    grid-template-areas: ".";
+    grid-template-columns: repeat(auto-fit, minmax(0px, 378px));
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .con-ps-card-container {
+    max-width: 100%;
+    min-width: 0px;
+  }
+  
+  
     
 }
 
@@ -273,154 +256,169 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     min-width: 426px;
   }
 
-  .riverflow-left {
-    padding-top: 40px;
-    padding-right: 20px;
-    padding-bottom: 40px;
-    padding-left: 20px;
-  }
-  
-  ._2-card-grid-uneven-container-left {
-    max-width: none;
-    align-self: stretch;
-    grid-template-areas: "Area"
-      "Area-2";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-  }
-  
-  .riverflow-right {
-    padding-top: 40px;
-    padding-right: 20px;
-    padding-bottom: 40px;
-    padding-left: 20px;
-  }
-  
-  ._2-card-grid-uneven-container-right {
-    max-width: none;
-    align-self: stretch;
-    grid-template-areas: "Area"
-      "Area-2";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-  }
+.riverflow-left   {
+  padding-bottom: 48px;
+}
 
-  ._2-card-grid-container {
-    max-width: none;
-    align-self: stretch;
-    grid-template-areas: "Area"
-      "Area-3"
-      "Area-2"
-      "Area-4";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-  }
-  
-  .simple-img-mask {
-    max-height: none;
-    min-height: auto;
-  }
+._2-card-grid-uneven-container-left   {
+  max-width: none;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-areas: "Area"
+    "Area-2";
+  grid-template-columns: repeat(auto-fit, minmax(200px, 590px));
+  grid-template-rows: auto auto;
+}
 
-  ._3-card-grid-container {
-    justify-content: space-between;
-    justify-items: stretch;
-    align-items: stretch;
-    align-content: stretch;
-    align-self: stretch;
-    grid-template-areas: "Area Area-3"
-      "Area-2 .";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-  }
+.riverflow-right   {
+  padding-bottom: 48px;
+}
 
-  .ps-app-card-container {
-    min-width: auto;
-  }
-  
-  ._4-card-grid-container {
-    max-width: none;
-    justify-items: stretch;
-    align-items: stretch;
-    align-self: stretch;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-  }
-  
+._2-card-grid-uneven-container-right   {
+  max-width: none;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-areas: "Area"
+    "Area-2";
+  grid-template-columns: repeat(auto-fit, minmax(200px, 590px));
+  grid-template-rows: auto auto;
+}
 
-  ._4-card-grid-container._378-max-width {
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    grid-template-rows: auto auto;
-  }
-  
+.hero-cta-background-container   {
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  background-size: cover;
+}
+
+.hero-2-card-grid-uneven-container-simple   {
+  max-width: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  grid-template-areas: "Area"
+    "Area-2";
+  grid-template-columns: repeat(auto-fit, minmax(200px, 378px));
+  grid-template-rows: auto auto;
+}
+
+
+._1-card-grid-center-container   {
+  max-width: none;
+  align-self: stretch;
+  grid-template-areas: "."
+    "Area";
+  grid-template-columns: repeat(auto-fit, minmax(200px, 462px));
+  grid-template-rows: auto;
+}
+
+._2-card-grid-container   {
+  max-width: none;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  grid-template-areas: "Area"
+    "Area-2"
+    "Area-3"
+    "Area-4";
+  grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
+  grid-template-rows: auto auto auto auto;
+}
+
+.simple-img-mask   {
+  max-height: none;
+  min-height: auto;
+}
+
+._4-card-mason-grid-container   {
+  max-width: none;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  grid-auto-flow: row;
+  grid-template-areas: "Area Area-2"
+    "Area-4 Area-3";
+  grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+  grid-template-rows: auto auto;
+}
+
+.discover-card-container {
+  min-width: auto;
+}
+
+.grid-9-3   {
+  justify-content: stretch;
+  justify-items: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  grid-template-areas: "Area"
+    "Area-2";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+
+.discover-card-hero-img-mask   {
+  width: auto;
+  min-height: 275px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 0px;
+}
+
+.hero-card-container {
+  display: none;
+}
+
+.hero-inner-card-container {
+  display: block;
+}
+
+._3-card-grid-container   {
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  grid-template-areas: "Area Area-3"
+    "Area-2 .";
+  grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+  grid-template-rows: auto auto;
+}
+
+.ps-app-card-container {
+  min-width: auto;
+}
+
+._4-card-grid-container   {
+  max-width: none;
+  justify-items: center;
+  align-items: center;
+  align-self: stretch;
+  grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+  grid-template-rows: auto auto;
+}
 
   .con-ps-card-container {
     min-width: 0px;
   }
 
-
-  ._4-card-mason-grid-container {
-    max-width: none;
-    align-self: stretch;
-    grid-auto-flow: row;
-    grid-column-gap: 16px;
-    grid-template-areas: "Area Area-2"
-      "Area-4 Area-3";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-  }
-
-
-  /*4-card mason-grid webflow id quad cards*/
-#w-node-_055dc525-7457-f92f-7e04-06c3fd34c082-965f3beb {
-  -ms-grid-column-span: 2;
-    grid-column-end: 2;
-}
-
-  /*custom webflow grid id singel row*/
-/*#w-node-_300995be-d2c8-4975-8f50-1951e81e581e-965f3beb {
-  -ms-grid-column-span: 1;
-  grid-column-end: 1;
-  -ms-grid-column: 1;
-  grid-column-start: 1;
-  -ms-grid-row-span: 1;
-  grid-row-end: 2;
-  -ms-grid-row: 1;
-  grid-row-start: 1;
-}*/
-
-  .discover-card-container {
-    min-width: auto;
-  }
-
-  .grid-9-3 {
-    justify-content: stretch;
-    justify-items: stretch;
-    align-items: stretch;
-    align-content: stretch;
-    grid-template-areas: "Area"
-      "Area-2";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-  }
-
-  .discover-card-hero-img-mask {
-    width: auto;
-    min-height: 275px;
-    border-top-right-radius: 6px;
-    border-bottom-left-radius: 0px;
-  }
-
-  .hero-card-container {
-    display: none;
-  }
-
-  .hero-inner-card-container {
-    display: block;
-  }
-  
-  
 
 }
 
@@ -436,108 +434,117 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     min-width: 640px;
   }
 
+
+  .riverflow-left {
+    padding-top: 0px;
+    padding-bottom: 56px;
+  }
   
-._2-card-grid-uneven-container-left {
-  justify-content: space-between;
-  justify-items: stretch;
-  align-content: stretch;
-  grid-auto-flow: row;
-  grid-column-gap: 32px;
-  grid-template-areas: "Area Area-3";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-}
-
-
-.riveflow-container {
-  min-width: 280px;
-}
-
-._2-card-grid-uneven-container-right {
-  justify-content: space-between;
-  justify-items: stretch;
-  align-content: stretch;
-  grid-auto-flow: row;
-  grid-column-gap: 32px;
-  grid-template-areas: "Area Area-3";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-}
-
-  ._2-card-grid-container {
+  ._2-card-grid-uneven-container-left   {
+    justify-content: center;
+    justify-items: stretch;
+    align-content: stretch;
+    grid-auto-flow: row;
+    grid-column-gap: 32px;
+    grid-template-areas: "Area Area-2";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .riverflow-right {
+    padding-top: 0px;
+    padding-bottom: 56px;
+  }
+  
+  ._2-card-grid-uneven-container-right   {
+    justify-content: center;
+    justify-items: stretch;
+    align-content: stretch;
+    grid-auto-flow: row;
+    grid-column-gap: 32px;
+    grid-template-areas: "Area Area-3";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .hero-cta-background-container   {
+    display: grid;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    background-size: auto 90%;
+  }
+  
+  .hero-2-card-grid-uneven-container-simple   {
+    max-width: 83.3%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    grid-auto-flow: row;
+    grid-template-areas: "Area Area-2";
+    grid-template-columns: 1fr 0.65fr;
+    grid-template-rows: auto;
+  }
+  
+  ._1-card-grid-center-container   {
     justify-content: space-between;
     justify-items: stretch;
     align-content: stretch;
     grid-auto-flow: row;
-    grid-template-areas: "Area Area-3";
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "Area"
+      "Area-2";
+    grid-template-columns: minmax(200px, 956px);
     grid-template-rows: auto auto;
   }
   
-  .simple-card-container {
-    min-width: 280px;
+  ._2-card-grid-container   {
+    justify-content: center;
+    justify-items: stretch;
+    align-content: stretch;
+    grid-auto-flow: row;
+    grid-template-areas: "Area Area-3"
+      "Area-2 Area-4";
+    grid-template-columns: minmax(100px, 462px) repeat(auto-fit, minmax(100px, 462px));
+    grid-template-rows: auto auto;
   }
 
   .simple-img-mask {
     min-height: auto;
     max-height: auto;
   }
-
-
-  ._3-card-grid-container {
-    justify-content: space-between;
-    justify-items: stretch;
-    align-content: stretch;
-    grid-auto-flow: row;
-    grid-template-areas: "Area Area-3"
-      "Area-2 .";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-  }
-
-  .ps-app-card-container {
-    min-width: 280px;
-  }
-
-  ._4-card-grid-container {
-    grid-column-gap: 20px;
-    grid-template-areas: "Area Area-2"
-      "Area-3 Area-4";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-  }
-
   
-  ._4-card-grid-container._378-max-width {
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
-  }
-
-  .con-ps-card-container: {
-    min-width: 280px;
-  }
-
-  ._4-card-mason-grid-container {
-    justify-content: stretch;
+  ._4-card-mason-grid-container   {
+    justify-content: center;
     justify-items: stretch;
     align-items: stretch;
     align-content: stretch;
-    grid-column-gap: 20px;
     grid-template-areas: "Area Area Area"
       "Area-2 Area-3 Area-4";
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(100px, 378px) minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
     grid-template-rows: minmax(0px, 3fr) auto;
   }
-
-  .discover-card-container {
-    min-width: auto;
-  }
-
-  .grid-9-3 {
+  
+  .grid-9-3   {
     grid-template-areas: "Area Area-2";
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
+  }
+  
+  .discover-card-container {
+    min-width: auto;
   }
 
   .discover-card-hero-img-mask {
@@ -547,11 +554,29 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   .hero-inner-card-container {
     display: none;
   }
-
+ 
+  ._3-card-grid-container   {
+    justify-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+    align-content: stretch;
+    grid-auto-flow: row;
+    grid-template-areas: "Area Area-3"
+      "Area-2 .";
+    grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+    grid-template-rows: auto auto;
+  }
   
+  ._4-card-grid-container   {
+    justify-content: center;
+    grid-template-areas: "Area Area-2"
+      "Area-3 Area-4";
+    grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+    grid-template-rows: auto auto;
+  }  
+  
+
  
 }
 
 /*END Consonant webflow simplified media queries*/ 
-
-
