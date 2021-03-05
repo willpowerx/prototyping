@@ -22,6 +22,11 @@ github and jsdeliver. Simply create a free account on github, create a depositor
 
 
 
+.Block:local-styles {
+  grid-area: Area-2;
+}
+
+
 */
 
 /*temp remove badge*/
@@ -175,8 +180,6 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
     grid-template-rows: auto auto auto auto;
   }
-
-  
   
   ._2-card-grid-container  {
     max-width: 100%;
@@ -417,6 +420,12 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   grid-template-rows: auto auto auto auto;
 }
 
+.simple-card-container {
+  max-height: 475px;
+  max-width: 100%;
+  min-height: 300px;
+}
+
 .simple-img-mask   {
   max-height: none;
   min-height: auto;
@@ -634,6 +643,10 @@ github and jsdeliver. Simply create a free account on github, create a depositor
       "Area-3 Area-4";
     grid-template-columns: minmax(100px, 462px) repeat(auto-fit, minmax(100px, 462px));
     grid-template-rows: auto auto;
+  }
+
+  .simple-card-container {
+    min-height: 375px;
   }
 
   .simple-img-mask {
