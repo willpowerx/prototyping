@@ -435,15 +435,16 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   min-width: auto;
 }
 
-#hero-discovery-card-01.w-node-_055dc525-7457-f92f-7e04-06c3fd34c082-965f3beb {
-  -ms-grid-column-span: 1;
-  grid-column-end: 1;
-  -ms-grid-column: 1;
-  grid-column-start: 1;
-  -ms-grid-row-span: 1;
-  grid-row-end: 1;
-  -ms-grid-row: 1;
-  grid-row-start: 1;
+/*hero card grid id/name div id - string id changes per page so overide needed instead - changes grid order and column size*/
+#hero-discovery-card-01 {
+  -ms-grid-column-span: 1 !important;
+  grid-column-end: 1 !important;
+  -ms-grid-column: 1 !important;
+  grid-column-start: 1 !important;
+  -ms-grid-row-span: 1 !important;
+  grid-row-end: 1 !important;
+  -ms-grid-row: 1 !important;
+  grid-row-start: 1 !important;
 }
 
 /*hero card grid id - change grid order and column size - may add to container*/
