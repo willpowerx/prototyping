@@ -8,8 +8,10 @@ webflow breakpoint translations
 
 margins- is just 1200px full or 83.3% container
 360–599px
-600–1199px
+600–959px
+960-1199px
 1200–1440px
+
 1440px+ - XL : margins- 8.3 - {container 1200px} - 8.3
 
 class names will need to be unifeied later with XD compnonents, soe xpect audit clean up then.. 
@@ -433,13 +435,24 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   min-width: auto;
 }
 
+#hero-discovery-card-01.w-node-_055dc525-7457-f92f-7e04-06c3fd34c082-965f3beb {
+  -ms-grid-column-span: 1;
+  grid-column-end: 1;
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 1;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+}
+
 /*hero card grid id - change grid order and column size - may add to container*/
 #w-node-_055dc525-7457-f92f-7e04-06c3fd34c082-eff930ec {
   -ms-grid-column-span: 2;
   grid-column-end: 2;
 }
 
-/*hero card grid old id - change grid order and size - may add to container*/
+/*hero card grid old id webflwo genrates per item per page so defien and do that instead- change grid order and size - may add to container*/
 #w-node-_055dc525-7457-f92f-7e04-06c3fd34c082-965f3beb {
   -ms-grid-column-span: 1;
   grid-column-end: 1;
