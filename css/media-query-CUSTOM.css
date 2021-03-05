@@ -21,6 +21,7 @@ can minfy final files or even host via github etc and link in to clean up page l
 github and jsdeliver. Simply create a free account on github, create a depository and upload your file, then reference it with jsdeliver.
 
 
+
 */
 
 /*temp remove badge*/
@@ -165,6 +166,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     padding-bottom: 20px;
     justify-content: center;
     align-items: center;
+    align-content: center;
     grid-auto-flow: row;
     grid-template-areas: "Area"
       "Area-2"
@@ -173,6 +175,8 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
     grid-template-rows: auto auto auto auto;
   }
+
+  
   
   ._2-card-grid-container  {
     max-width: 100%;
@@ -389,12 +393,12 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   max-width: none;
   justify-content: center;
   justify-items: center;
-  align-items: center;
-  align-content: center;
+  align-items: stretch;
+  align-content: stretch;
   align-self: stretch;
   grid-template-areas: "Area Area-2"
     "Area-3 Area-4";
-  grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+  grid-template-columns: minmax(100px, 375px) repeat(auto-fit, minmax(100px, 375px));
   grid-template-rows: auto auto;
 }
 
@@ -435,7 +439,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   min-width: auto;
 }
 
-/*hero card grid id/name div id - string id changes per page so overide needed instead - changes grid order and column size*/
+/*hero card grid id/name div id - webflow string id changes per page so overide is needed instead - changes grid order and column size*/
 #hero-discovery-card-01 {
   -ms-grid-column-span: 1 !important;
   grid-column-end: 1 !important;
@@ -445,24 +449,6 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   grid-row-end: 1 !important;
   -ms-grid-row: 1 !important;
   grid-row-start: 1 !important;
-}
-
-/*hero card grid id - change grid order and column size - may add to container*/
-#w-node-_055dc525-7457-f92f-7e04-06c3fd34c082-eff930ec {
-  -ms-grid-column-span: 2;
-  grid-column-end: 2;
-}
-
-/*hero card grid old id webflow genrates per item per page so defien and do that instead- change grid order and size - may add to container*/
-#w-node-_055dc525-7457-f92f-7e04-06c3fd34c082-965f3beb {
-  -ms-grid-column-span: 1;
-  grid-column-end: 1;
-  -ms-grid-column: 1;
-  grid-column-start: 1;
-  -ms-grid-row-span: 1;
-  grid-row-end: 1;
-  -ms-grid-row: 1;
-  grid-row-start: 1;
 }
 
 .grid-9-3   {
