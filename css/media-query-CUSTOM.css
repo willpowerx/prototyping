@@ -453,7 +453,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   grid-column-end: 2;
 }
 
-/*hero card grid old id webflwo genrates per item per page so defien and do that instead- change grid order and size - may add to container*/
+/*hero card grid old id webflow genrates per item per page so defien and do that instead- change grid order and size - may add to container*/
 #w-node-_055dc525-7457-f92f-7e04-06c3fd34c082-965f3beb {
   -ms-grid-column-span: 1;
   grid-column-end: 1;
