@@ -366,6 +366,10 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   grid-template-rows: auto auto;
 }
 
+.text-mid-container-8-col {
+  width: 100%;
+}
+
 ._1-card-grid-center-container-v2 {
   max-width: none;
   justify-content: center;
