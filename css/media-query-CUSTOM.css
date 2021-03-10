@@ -686,6 +686,10 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   .hero-inner-card-container {
     display: none;
   }
+
+  .hero-inner-card-container-mobile {
+    display: block;
+}
  
   ._3-card-grid-container {
     justify-content: center;
