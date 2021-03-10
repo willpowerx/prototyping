@@ -684,11 +684,11 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   }
 
   .hero-inner-card-container {
-    display: none;
+    display: block;
   }
 
   .hero-inner-card-container-mobile {
-    display: block;
+    display: none;
 }
  
   ._3-card-grid-container {
