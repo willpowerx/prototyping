@@ -14,17 +14,11 @@ margins- is just 1200px full or 83.3% container
 
 1440px+ - XL : margins- 8.3 - {container 1200px} - 8.3
 
-class names will need to be unifeied later with XD compnonents, soe xpect audit clean up then.. 
+class names will need to be unified later with XD compnonents, so expect audit clean up then.. (in progress)
 if you change anything in webflow you have to update here too or you will get conflicts
 
 can minfy final files or even host via github etc and link in to clean up page load
 github and jsdeliver. Simply create a free account on github, create a depository and upload your file, then reference it with jsdeliver.
-
-
-
-.Block:local-styles {
-  grid-area: Area-2;
-}
 
 
 */
@@ -251,25 +245,22 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     display: block;
   }
 
-  ._3-card-grid-container {
+  .cards_comparison_product {
     max-width: 100%;
-    min-width: auto;
     justify-content: center;
-    justify-items: center;
+    justify-items: stretch;
     align-items: center;
     align-content: center;
     grid-auto-flow: row;
     grid-template-areas: "Area"
       "Area-2"
       "Area-3";
-    grid-template-columns: repeat(auto-fit, minmax(100px, 378px));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 368px));
     grid-template-rows: auto auto auto;
   }
   
-
-  .ps-app-card-container {
-    max-width: 100%;
-    min-width: 100%;
+  .device-icon-container {
+    width: 30%;
   }
   
   ._4-card-grid-container  {
@@ -495,8 +486,8 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   padding-top: 40px;
   padding-bottom: 40px;
 }
-  
-._3-card-grid-container {
+
+.cards_comparison_product {
   justify-content: center;
   justify-items: stretch;
   align-items: stretch;
@@ -504,16 +495,25 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   align-self: stretch;
   grid-template-areas: "Area Area-3"
     "Area-2 .";
-  grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+  grid-template-columns: minmax(100px, 368px) repeat(auto-fit, minmax(100px, 368px));
   grid-template-rows: auto auto;
 }
 
-
-.ps-app-card-container {
-  max-width: 100%;
-  min-width: 100%;
+.comparison-product-card {
+  min-width: auto;
 }
 
+.cp-header-text-container {
+  max-height: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: center;
+}
+
+.device-icon-container {
+  width: 30%;
+}
+  
 ._4-card-grid-container   {
   max-width: none;
   justify-items: center;
@@ -686,18 +686,18 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   .hero-inner-card-container-mobile {
     display: none;
 }
- 
-  ._3-card-grid-container {
-    justify-content: center;
-    justify-items: stretch;
-    align-items: stretch;
-    align-content: stretch;
-    grid-auto-flow: row;
-    grid-template-areas: "Area Area-3"
-      "Area-2 .";
-    grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
-    grid-template-rows: auto auto;
-  }
+
+.cards_comparison_product {
+  justify-content: center;
+  justify-items: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  grid-auto-flow: row;
+  grid-template-areas: "Area Area-3"
+    "Area-2 .";
+  grid-template-columns: minmax(100px, 368px) repeat(auto-fit, minmax(100px, 368px));
+  grid-template-rows: auto auto;
+}
   
   ._4-card-grid-container   {
     justify-content: center;
