@@ -255,7 +255,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     grid-template-areas: "Area"
       "Area-2"
       "Area-3";
-    grid-template-columns: repeat(auto-fit, minmax(100px, 368px));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 378px));
     grid-template-rows: auto auto auto;
   }
   
@@ -499,7 +499,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   align-self: stretch;
   grid-template-areas: "Area Area-3"
     "Area-2 .";
-  grid-template-columns: minmax(100px, 368px) repeat(auto-fit, minmax(100px, 368px));
+  grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
   grid-template-rows: auto auto;
 }
 
@@ -703,7 +703,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   grid-auto-flow: row;
   grid-template-areas: "Area Area-3"
     "Area-2 .";
-  grid-template-columns: minmax(100px, 368px) repeat(auto-fit, minmax(100px, 368px));
+  grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
   grid-template-rows: auto auto;
 }
   
