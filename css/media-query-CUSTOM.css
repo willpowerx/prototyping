@@ -263,6 +263,10 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     width: 30%;
   }
   
+  .cp-card-text-box {
+    min-height: 43px;
+  }
+  
   ._4-card-grid-container  {
     max-width: 100%;
     margin-right: 0px;
@@ -512,6 +516,10 @@ github and jsdeliver. Simply create a free account on github, create a depositor
 
 .device-icon-container {
   width: 30%;
+}
+
+.cp-card-text-box {
+  min-height: 65px;
 }
   
 ._4-card-grid-container   {
