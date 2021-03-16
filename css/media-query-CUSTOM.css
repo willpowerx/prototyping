@@ -338,6 +338,21 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   grid-template-rows: auto auto;
 }
 
+/*riverflow override grid id/name div id - webflow string id changes per page so overide is needed instead - changes grid order*/
+#riverflow-right-img {
+  -webkit-box-ordinal-group: -9998 !important;
+  -webkit-order: -9999 !important;
+  -ms-flex-order: -9999 !important;
+  order: -9999 !important;
+}
+
+#riverflow-text-box {
+  -webkit-box-ordinal-group: 10000 !important;
+  -webkit-order: 9999 !important;
+  -ms-flex-order: 9999 !important;
+  order: 9999 !important;
+}
+
 .hero-cta-background-container   {
   padding-top: 40px;
   padding-right: 20px;
