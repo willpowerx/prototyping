@@ -32,6 +32,12 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   visibility: hidden !important;
 }
 
+.text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 /*Consonant webflow simplified media queries WIP*/ 
 
 /* phone breakpoint 360-599px webflow style=tiny*/
