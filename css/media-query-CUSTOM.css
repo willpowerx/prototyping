@@ -32,11 +32,37 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   visibility: hidden !important;
 }
 
+/* card overflow text styles*/
+/* line clamp set position of ellipsis*/
+.two-line-text-block-ellipsis  {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: 48px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.three-line-text-block-ellipsis  {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: 48px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .text-overflow {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+
 
 /*Consonant webflow simplified media queries WIP*/ 
 
