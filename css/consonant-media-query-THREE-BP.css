@@ -1,0 +1,769 @@
+/*notes:
+webflow breakpoint translations
+1440px+ (not needed unless you want custom big layouts later) style:xl*
+1324px-992px base will cascade up and down if not customized (use main to generate styles)
+991-768px  Tablet mode/ still desktop (all styles must be added to 900-1199px media query) style= medium*
+767px-477px Mobile landscape/tablets (all styles must be added to a 600px-899px media query) style=small*
+478px and down default (all styles must be added to a 599 media query) style = tiny*
+
+margins- is just 1200px full or 83.3% container
+360–599px
+600–899px
+900-1199px (may not always be used but helps fix issues when it comes up)
+1200–1440px Desktop up* (this does not count as a breakpoint/ its just the default view)
+
+1440px+ - XL : margins- 8.3 - {container 1200px} - 8.3
+
+class names will need to be unified later with XD compnonents, so expect audit clean up then.. (in progress)
+if you change anything in webflow you have to update here too or you will get conflicts
+
+can minfy final files or even host via github etc and link in to clean up page load
+github and jsdeliver. Simply create a free account on github, create a depository and upload your file, then reference it with jsdeliver.
+
+
+*/
+
+/*temp remove badge*/
+.w-webflow-badge {
+  visibility: hidden !important;
+}
+
+.w-webflow-badge>img {
+  visibility: hidden !important;
+}
+
+/* card overflow text styles*/
+/* line clamp set position of ellipsis*/
+.two-line-text-block-ellipsis  {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: 46px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.three-line-text-block-ellipsis  {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: 61px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+
+/*Consonant webflow simplified media queries WIP*/ 
+
+/* phone breakpoint 360-599px webflow style=tiny*/
+@media (max-width: 599px) {
+  .con-hide-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  
+  .con-hide-mobile: {
+          display: none;
+        }
+  
+  /* exact sizes vs fluid container*/
+  ._16x9-960x540 {
+    width: 256px;
+    height: 144px;
+    max-height: none;
+    max-width: none;
+    min-height: 144px;
+    min-width: 256px;
+    object-fit: contain;
+  }
+
+  .riveflow-container {
+    max-width: 100%;
+    min-width: 0px;
+  }
+
+  ._2-card-grid-uneven-container-left  {
+    max-width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    grid-auto-flow: row;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-areas: "Area"
+      "Area-2";
+    grid-template-columns: repeat(auto-fit, minmax(200px, 590px));
+    grid-template-rows: auto auto;
+  }
+
+  ._2-card-grid-uneven-container-right  {
+    max-width: 100%;
+    justify-content: stretch;
+    align-items: stretch;
+    grid-auto-flow: row;
+    grid-column-gap: 16px;
+    grid-template-areas: "Area"
+      "Area-2";
+    grid-template-columns: repeat(auto-fit, minmax(200px, 590px));
+    grid-template-rows: auto auto;
+  }
+
+  .hero-2-card-grid-uneven-container-simple {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-auto-flow: row;
+    grid-column-gap: 16px;
+    grid-template-areas: ".";
+    grid-template-columns: repeat(auto-fit, minmax(200px, 462px));
+    grid-template-rows: auto auto;
+  }
+  
+  .hero-img-container  {
+    max-width: 100%;
+    min-width: 0px;
+  }
+
+  .text-mid-container-8-col {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  ._1-card-grid-center-container-v2 {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-auto-flow: row;
+    grid-column-gap: 16px;
+    grid-template-areas: "Area"
+      "Area-2";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
+    grid-template-rows: auto;
+  }
+
+  ._1-card-grid-center-container {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-auto-flow: row;
+    grid-column-gap: 16px;
+    grid-template-areas: "Area"
+      "Area-2";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
+    grid-template-rows: auto;
+  }
+
+  ._2-grid-max-content {
+    grid-template-columns: minmax(min-content, max-content);
+  }
+
+  .simple-card-container-max {
+    max-width: 590px;
+  }
+
+  ._2-card-grid-container-v2 {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    grid-auto-flow: row;
+    grid-template-areas: "Area"
+      "Area-2"
+      "Area-3"
+      "Area-4";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
+    grid-template-rows: auto auto auto auto;
+  }
+  
+  ._2-card-grid-container  {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-auto-flow: row;
+    grid-template-areas: "Area"
+      "Area-2"
+      "Area-3"
+      "Area-4";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
+    grid-template-rows: auto auto auto auto;
+  }  
+
+  .simple-card-container {
+    max-width: 100%;
+    min-width: 0px;
+  }
+
+  .simple-img-mask {
+    max-height: none;
+    min-height: auto;
+  }
+
+  ._4-card-mason-grid-container  {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-auto-flow: row;
+    grid-template-areas: ".";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 378px));
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .discover-card-container {
+    max-width: 100%;
+    min-width: 0px;
+  }
+  
+  .grid-9-3  {
+    grid-template-areas: "Area"
+      "Area-2";
+    grid-template-columns: 2fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .discover-card-hero-img-mask  {
+    height: 100%;
+    min-height: 275px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .hero-card-container {
+    display: none;
+  }
+
+  .hero-inner-card-container-mobile {
+    display: block;
+  }
+
+  .cards_comparison_product {
+    max-width: 100%;
+    justify-content: center;
+    justify-items: stretch;
+    align-items: center;
+    align-content: center;
+    grid-auto-flow: row;
+    grid-template-areas: "Area"
+      "Area-2"
+      "Area-3";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 378px));
+    grid-template-rows: auto auto auto;
+  }
+  
+  .device-icon-container {
+    width: 30%;
+  }
+  
+  .cp-card-text-box {
+    min-height: 43px;
+  }
+  
+  ._4-card-grid-container  {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: stretch;
+    grid-auto-flow: row;
+    grid-template-areas: ".";
+    grid-template-columns: repeat(auto-fit, minmax(0px, 378px));
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .con-ps-card-container {
+    max-width: 100%;
+    min-width: 0px;
+  }
+  
+  
+    
+}
+
+/* tablet - mobile landscape breakpoint 600-899px  webflow style=small */
+@media (min-width: 600px) and (max-width: 899px) {
+  ._16x9-960x540 {
+    width: 426px;
+    height: 240px;
+    max-height: none;
+    max-width: none;
+    min-height: 240px;
+    min-width: 426px;
+  }
+
+.riverflow-left   {
+  padding-bottom: 48px;
+}
+
+._2-card-grid-uneven-container-left   {
+  max-width: none;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-areas: "Area"
+    "Area-2";
+  grid-template-columns: repeat(auto-fit, minmax(200px, 590px));
+  grid-template-rows: auto auto;
+}
+
+.riverflow-right   {
+  padding-bottom: 48px;
+}
+
+._2-card-grid-uneven-container-right   {
+  max-width: none;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-areas: "Area"
+    "Area-2";
+  grid-template-columns: repeat(auto-fit, minmax(200px, 590px));
+  grid-template-rows: auto auto;
+}
+
+/*riverflow override grid id/name div id - webflow string id changes per page so overide is needed instead - changes grid order*/
+#riverflow-right-img {
+  -webkit-box-ordinal-group: -9998 !important;
+  -webkit-order: -9999 !important;
+  -ms-flex-order: -9999 !important;
+  order: -9999 !important;
+}
+
+#riverflow-text-box {
+  -webkit-box-ordinal-group: 10000 !important;
+  -webkit-order: 9999 !important;
+  -ms-flex-order: 9999 !important;
+  order: 9999 !important;
+}
+
+.hero-cta-background-container   {
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  background-size: cover;
+}
+
+.hero-2-card-grid-uneven-container-simple {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  grid-row-gap: 8px;
+  grid-template-areas: "Area"
+    "Area-2";
+  grid-template-columns: repeat(auto-fit, minmax(200px, 590px));
+  grid-template-rows: auto auto;
+}
+
+.text-mid-container-8-col {
+  width: 100%;
+}
+
+._1-card-grid-center-container-v2 {
+  max-width: none;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  grid-template-areas: "."
+    "Area";
+  grid-template-columns: repeat(auto-fit, 100%);
+  grid-template-rows: auto;
+}
+
+._1-card-grid-center-container {
+  max-width: none;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  grid-template-areas: "."
+    "Area";
+  grid-template-columns: repeat(auto-fit, minmax(200px, 590px));
+  grid-template-rows: auto;
+}
+
+._2-card-grid-container-v2 {
+  max-width: none;
+  justify-content: center;
+  justify-items: center;
+  align-items: stretch;
+  align-content: stretch;
+  align-self: stretch;
+  grid-template-areas: "Area Area-2"
+    "Area-3 Area-4";
+  grid-template-columns: minmax(100px, 375px) repeat(auto-fit, minmax(100px, 375px));
+  grid-template-rows: auto auto;
+}
+
+._2-card-grid-container   {
+  max-width: none;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  grid-template-areas: "Area"
+    "Area-2"
+    "Area-3"
+    "Area-4";
+  grid-template-columns: repeat(auto-fit, minmax(100px, 590px));
+  grid-template-rows: auto auto auto auto;
+}
+
+.simple-card-container {
+  max-height: 475px;
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.simple-img-mask   {
+  max-height: none;
+  min-height: auto;
+}
+
+._4-card-mason-grid-container {
+  max-width: none;
+  justify-items: stretch;
+  align-items: stretch;
+  align-content: center;
+  align-self: stretch;
+  grid-auto-flow: row;
+  grid-template-areas: "Area Area-2"
+    "Area-4 Area-3";
+  grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+  grid-template-rows: auto auto;
+}
+
+.discover-card-container {
+  min-width: auto;
+}
+
+/*hero card grid id/name div id - webflow string id changes per page so overide is needed instead - changes grid order and column size*/
+#hero-discovery-card-01 {
+  -ms-grid-column-span: 1 !important;
+  grid-column-end: 1 !important;
+  -ms-grid-column: 1 !important;
+  grid-column-start: 1 !important;
+  -ms-grid-row-span: 1 !important;
+  grid-row-end: 1 !important;
+  -ms-grid-row: 1 !important;
+  grid-row-start: 1 !important;
+}
+
+.grid-9-3   {
+  justify-content: stretch;
+  justify-items: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  grid-template-areas: "Area"
+    "Area-2";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+
+.discover-card-hero-img-mask   {
+  width: auto;
+  min-height: 275px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 0px;
+}
+
+.hero-card-container {
+  display: none;
+}
+
+.hero-inner-card-container-mobile {
+  display: block;
+}
+
+.con-card-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.cards_comparison_product {
+  justify-content: center;
+  justify-items: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  align-self: stretch;
+  grid-template-areas: "Area Area-3"
+    "Area-2 .";
+  grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+  grid-template-rows: auto auto;
+}
+
+.comparison-product-card {
+  min-width: auto;
+}
+
+.cp-header-text-container {
+  max-height: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: center;
+}
+
+.device-icon-container {
+  width: 30%;
+}
+
+.cp-card-text-box {
+  min-height: 65px;
+}
+  
+._4-card-grid-container   {
+  max-width: none;
+  justify-items: center;
+  align-items: center;
+  align-self: stretch;
+  grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+  grid-template-rows: auto auto;
+}
+
+  .con-ps-card-container {
+    min-width: 0px;
+  }
+
+
+}
+
+/* desktop med/tablet breakpoint 900-1199px webflow style-med */
+@media (min-width: 900px) and (max-width: 1199px) {
+
+  ._16x9-960x540 {
+    width: 640px;
+    height: 360px;
+    max-height: none;
+    max-width: none;
+    min-height: 360px;
+    min-width: 640px;
+  }
+
+
+  .riverflow-left {
+    padding-top: 0px;
+    padding-bottom: 56px;
+  }
+  
+  ._2-card-grid-uneven-container-left   {
+    justify-content: center;
+    justify-items: stretch;
+    align-content: stretch;
+    grid-auto-flow: row;
+    grid-column-gap: 32px;
+    grid-template-areas: "Area Area-2";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .riverflow-right {
+    padding-top: 0px;
+    padding-bottom: 56px;
+  }
+  
+  ._2-card-grid-uneven-container-right   {
+    justify-content: center;
+    justify-items: stretch;
+    align-content: stretch;
+    grid-auto-flow: row;
+    grid-column-gap: 32px;
+    grid-template-areas: "Area Area-3";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .hero-cta-background-container   {
+    display: grid;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    background-size: auto 90%;
+  }
+  
+  .hero-2-card-grid-uneven-container-simple   {
+    max-width: 83.3%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    grid-auto-flow: row;
+    grid-template-areas: "Area Area-2";
+    grid-template-columns: 1fr 0.65fr;
+    grid-template-rows: auto;
+  }
+
+  ._1-card-grid-center-container-v2 {
+    justify-content: space-between;
+    justify-items: stretch;
+    align-content: stretch;
+    grid-auto-flow: row;
+    grid-template-areas: "Area"
+      "Area-2";
+    grid-template-columns: minmax(200px, 956px);
+    grid-template-rows: auto auto;
+  }
+  
+  ._1-card-grid-center-container {
+    justify-content: space-between;
+    justify-items: stretch;
+    align-content: stretch;
+    grid-auto-flow: row;
+    grid-template-areas: "Area"
+      "Area-2";
+    grid-template-columns: minmax(200px, 956px);
+    grid-template-rows: auto auto;
+  }
+
+  ._2-card-grid-container-v2 {
+    justify-content: center;
+    justify-items: stretch;
+    align-content: stretch;
+    grid-auto-flow: row;
+    grid-template-columns: minmax(100px, 462px) repeat(auto-fit, minmax(100px, 462px));
+    grid-template-rows: auto auto;
+  }
+
+  ._2-card-grid-container   {
+    justify-content: center;
+    justify-items: stretch;
+    align-content: stretch;
+    grid-auto-flow: row;
+    grid-template-areas: "Area Area-2"
+      "Area-3 Area-4";
+    grid-template-columns: minmax(100px, 462px) repeat(auto-fit, minmax(100px, 462px));
+    grid-template-rows: auto auto;
+  }
+
+  .simple-card-container {
+    min-height: 375px;
+  }
+
+  .simple-img-mask {
+    min-height: auto;
+    max-height: auto;
+  }
+  
+  ._4-card-mason-grid-container   {
+    justify-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+    align-content: stretch;
+    grid-template-areas: "Area Area Area"
+      "Area-2 Area-3 Area-4";
+    grid-template-columns: minmax(100px, 378px) minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+    grid-template-rows: minmax(0px, 3fr) auto;
+  }
+  
+  .grid-9-3   {
+    grid-template-areas: "Area Area-2";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .discover-card-container {
+    min-width: auto;
+  }
+
+  .discover-card-hero-img-mask {
+    min-height: 429px;
+  }
+
+  .hero-inner-card-container-mobile {
+    display: none;
+}
+
+.cards_comparison_product {
+  justify-content: center;
+  justify-items: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  grid-auto-flow: row;
+  grid-template-areas: "Area Area-3"
+    "Area-2 .";
+  grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+  grid-template-rows: auto auto;
+}
+  
+  ._4-card-grid-container   {
+    justify-content: center;
+    grid-template-areas: "Area Area-2"
+      "Area-3 Area-4";
+    grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
+    grid-template-rows: auto auto;
+  }  
+  
+
+ 
+}
+
+/*END Consonant webflow simplified media queries*/ 
