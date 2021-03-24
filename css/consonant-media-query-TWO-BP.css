@@ -24,6 +24,8 @@ if you change anything in webflow you have to update here too or you will get co
 can minfy final files or even host via github etc and link in to clean up page load
 github and jsdeliver. Simply create a free account on github, create a depository and upload your file, then reference it with jsdeliver.
 
+_2 style need to be fixed make then one two three etc
+
 
 
 
@@ -86,23 +88,12 @@ github and jsdeliver. Simply create a free account on github, create a depositor
           display: none;
         }
   
-  /* exact sizes vs fluid container*/
-  ._16x9-960x540 {
-    width: 256px;
-    height: 144px;
-    max-height: none;
-    max-width: none;
-    min-height: 144px;
-    min-width: 256px;
-    object-fit: contain;
-  }
-
   .riveflow-container {
     max-width: 100%;
     min-width: 0px;
   }
 
-  ._2-card-grid-uneven-container-left  {
+  .two-grid-uneven-container-left  {
     max-width: 100%;
     justify-content: center;
     justify-items: center;
@@ -117,7 +108,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     grid-template-rows: auto auto;
   }
 
-  ._2-card-grid-uneven-container-right  {
+   .two-grid-uneven-container-right  {
     max-width: 100%;
     justify-content: stretch;
     align-items: stretch;
@@ -155,23 +146,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     flex-wrap: nowrap;
   }
 
-  ._1-card-grid-center-container-v2 {
-    max-width: 100%;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    justify-content: center;
-    align-items: center;
-    grid-auto-flow: row;
-    grid-column-gap: 16px;
-    grid-template-areas: "Area"
-      "Area-2";
-    grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
-    grid-template-rows: auto;
-  }
-
-  ._1-card-grid-center-container {
+  .one-grid-center-container {
     max-width: 100%;
     margin-right: 0px;
     margin-left: 0px;
@@ -195,7 +170,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     max-width: 590px;
   }
 
-  ._2-card-grid-container-v2 {
+  .two-grid-container {
     max-width: 100%;
     margin-right: 0px;
     margin-left: 0px;
@@ -205,31 +180,11 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     align-items: center;
     align-content: center;
     grid-auto-flow: row;
-    grid-template-areas: "Area"
-      "Area-2"
-      "Area-3"
-      "Area-4";
+    grid-auto-columns: minmax(100px, 462px);
     grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
     grid-template-rows: auto auto auto auto;
   }
   
-  ._2-card-grid-container  {
-    max-width: 100%;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    justify-content: center;
-    align-items: center;
-    grid-auto-flow: row;
-    grid-template-areas: "Area"
-      "Area-2"
-      "Area-3"
-      "Area-4";
-    grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
-    grid-template-rows: auto auto auto auto;
-  }  
-
   .simple-card-container {
     max-width: 100%;
     min-width: 0px;
@@ -240,7 +195,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     min-height: auto;
   }
 
-  ._4-card-mason-grid-container  {
+  .four-card-mason-grid-container  {
     max-width: 100%;
     margin-right: 0px;
     margin-left: 0px;
@@ -305,7 +260,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     min-height: 43px;
   }
   
-  ._4-card-grid-container  {
+  .four-card-grid-container  {
     max-width: 100%;
     margin-right: 0px;
     margin-left: 0px;
@@ -330,20 +285,12 @@ github and jsdeliver. Simply create a free account on github, create a depositor
 
 /* tablet - mobile landscape breakpoint 600-899px  webflow style=small */
 @media (min-width: 600px) and (max-width: 899px) {
-  ._16x9-960x540 {
-    width: 426px;
-    height: 240px;
-    max-height: none;
-    max-width: none;
-    min-height: 240px;
-    min-width: 426px;
-  }
 
 .riverflow-left   {
   padding-bottom: 48px;
 }
 
-._2-card-grid-uneven-container-left   {
+.two-grid-uneven-container-left   {
   max-width: none;
   justify-content: center;
   justify-items: center;
@@ -362,7 +309,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   padding-bottom: 48px;
 }
 
-._2-card-grid-uneven-container-right   {
+ .two-grid-uneven-container-right   {
   max-width: none;
   justify-items: center;
   align-items: center;
@@ -418,7 +365,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   width: 100%;
 }
 
-._1-card-grid-center-container-v2 {
+.one-grid-center-container {
   max-width: none;
   justify-content: center;
   justify-items: center;
@@ -431,45 +378,16 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   grid-template-rows: auto;
 }
 
-._1-card-grid-center-container {
-  max-width: none;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  align-self: stretch;
-  grid-template-areas: "."
-    "Area";
-  grid-template-columns: repeat(auto-fit, minmax(200px, 590px));
-  grid-template-rows: auto;
-}
-
-._2-card-grid-container-v2 {
+.two-grid-container {
   max-width: none;
   justify-content: center;
   justify-items: center;
   align-items: stretch;
   align-content: stretch;
   align-self: stretch;
-  grid-template-areas: "Area Area-2"
-    "Area-3 Area-4";
+  grid-auto-columns: minmax(100px, 375px);
   grid-template-columns: minmax(100px, 375px) repeat(auto-fit, minmax(100px, 375px));
   grid-template-rows: auto auto;
-}
-
-._2-card-grid-container   {
-  max-width: none;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  align-self: stretch;
-  grid-template-areas: "Area"
-    "Area-2"
-    "Area-3"
-    "Area-4";
-  grid-template-columns: repeat(auto-fit, minmax(100px, 590px));
-  grid-template-rows: auto auto auto auto;
 }
 
 .simple-card-container {
@@ -483,7 +401,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   min-height: auto;
 }
 
-._4-card-mason-grid-container {
+.four-card-mason-grid-container {
   max-width: none;
   justify-items: stretch;
   align-items: stretch;
@@ -575,7 +493,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   min-height: 65px;
 }
 
-._4-card-grid-container {
+.four-card-grid-container {
   max-width: none;
   justify-items: center;
   align-items: center;
@@ -586,7 +504,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   grid-template-rows: auto auto;
 }
   
-  .con-ps-card-container {
+.con-ps-card-container {
     min-width: 0px;
   }
 
