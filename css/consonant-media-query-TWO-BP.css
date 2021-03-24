@@ -3,19 +3,20 @@ webflow breakpoint translations
 1440px+ (not needed unless you want custom big layouts later) style:xl*
 1324px-992px base will cascade up and down if not customized (use main to generate styles)
 
---not using in the 2 break point verison ---------
-{991-768px  Tablet mode/ still desktop (all styles must be added to 960-1199px media query) style= medium*
+--not using in the 2 break point verison shift everything---------
+(this becomes tablet up)
+{991-768px  Tablet mode/ still desktop (all styles must be added to 600-899px media query) style= medium*
 NOTE: all medium WEBLFLOW styles must be removed on the page for this to count as two. make iterations of all classes for this.}
 
-767px-477px Mobile landscape/tablets (all styles must be added to a 600px-959px media query) style=small*
+767px-477px Mobile landscape/tablets (all styles must be added to a 600px-899px media query) style=small*
 478px and down default (all styles must be added to a 599 media query) style = tiny*
+
 
 margins- is just 1200px full or 83.3% container
 ------  2 breakpoints  -------
 0-599 Mobile only
 600-899 Tablet up
-
-900-1440px+ - XL : margins- 8.3 - {container 1200px} - 8.3
+900-1440px+ - XL : margins- 8.3 - {container 1200px at 1440px} - 8.3
 
 class names will need to be unified later with XD compnonents, so expect audit clean up then.. (in progress)
 if you change anything in webflow you have to update here too or you will get conflicts
@@ -588,5 +589,6 @@ github and jsdeliver. Simply create a free account on github, create a depositor
 
 }
 
-/* No desktop med/tablet breakpoint 900-1199px webflow style-med in this version */
+/* desktop med/tablet breakpoint 900-1199px webflow style-med - not using */
+
 /*END Consonant webflow simplified media queries*/ 
