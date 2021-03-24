@@ -26,7 +26,6 @@ github and jsdeliver. Simply create a free account on github, create a depositor
 
 fix card comparison section
 
-
 */
 
 /*temp remove badge*/
@@ -250,13 +249,6 @@ fix card comparison section
     grid-template-rows: auto auto auto;
   }
   
-  .device-icon-container {
-    width: 30%;
-  }
-  
-  .cp-card-text-box {
-    min-height: 43px;
-  }
   
   .four-card-grid-container  {
     max-width: 100%;
@@ -472,24 +464,6 @@ fix card comparison section
   grid-template-rows: auto auto;
 }
 
-.comparison-product-card {
-  min-width: auto;
-}
-
-.cp-header-text-container {
-  max-height: 40px;
-  justify-content: flex-start;
-  align-items: center;
-  align-self: center;
-}
-
-.device-icon-container {
-  width: 30%;
-}
-
-.cp-card-text-box {
-  min-height: 65px;
-}
 
 .four-card-grid-container {
   max-width: none;
