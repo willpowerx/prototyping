@@ -37,7 +37,8 @@ github and jsdeliver. Simply create a free account on github, create a depositor
 }
 
 /* card overflow text styles*/
-/* line clamp set position of ellipsis*/
+
+/* for body copy - line clamp set position of ellipsis*/
 .two-line-text-block-ellipsis  {
   display: block;
   display: -webkit-box;
@@ -54,6 +55,28 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   display: -webkit-box;
   max-width: 100%;
   height: 61px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.four-line-text-block-ellipsis  {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: 76px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.five-line-text-block-ellipsis  {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: 91px;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
