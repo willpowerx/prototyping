@@ -87,7 +87,6 @@ flex grid and reorder method
 .text-overflow {
   overflow: hidden;
   word-break: break-all;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
