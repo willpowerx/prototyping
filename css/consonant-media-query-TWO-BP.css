@@ -24,6 +24,11 @@ if you change anything in webflow you have to update here too or you will get co
 can minfy final files or even host via github etc and link in to clean up page load
 github and jsdeliver. Simply create a free account on github, create a depository and upload your file, then reference it with jsdeliver.
 
+do
+flex grid and reorder method
+
+
+
 
 */
 
@@ -81,6 +86,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
 
 .text-overflow {
   overflow: hidden;
+  word-break: break-all;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
