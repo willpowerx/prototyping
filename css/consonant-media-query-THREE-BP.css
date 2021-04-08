@@ -6,13 +6,18 @@ webflow breakpoint translations
 767px-477px Mobile landscape/tablets (all styles must be added to a 600px-899px media query) style=small*
 478px and down default (all styles must be added to a 599 media query) style = tiny*
 
-margins- is just 1200px full or 83.3% container
+
+Consonant based breakpoints:
 360–599px
 600–899px
-900-1199px (may not always be used but helps fix issues when it comes up)
-1200–1440px Desktop up* (this does not count as a breakpoint/ its just the default view)
+900-1199px (may not always be used but helps fix issues when it comes up for authors)
 
-1440px+ - XL : margins- 8.3 - {container 1200px} - 8.3
+1200px - 1440px + Desktop up* (this does not count as a breakpoint/ its just the default view)
+1920px - HD (used only where needed big lean back experiences and 4k up displays needs)
+
+NOTED TO REVIEW
+1440px at this viewport the percent based containers locks. EX 83.3% container size locks at mx width 1200px. (soft breakpoint?) 
+fix this with better css set width % based and then max width allowed boom.. done.
 
 class names will need to be unified later with XD compnonents, so expect audit clean up then.. (in progress)
 if you change anything in webflow you have to update here too or you will get conflicts
@@ -33,12 +38,12 @@ github and jsdeliver. Simply create a free account on github, create a depositor
 }
 
 /* card overflow text styles*/
-/* line clamp set position of ellipsis*/
+
+/* for body copy - line clamp set position of ellipsis*/
 .two-line-text-block-ellipsis  {
   display: block;
   display: -webkit-box;
   max-width: 100%;
-  height: 46px;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -49,8 +54,27 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   display: block;
   display: -webkit-box;
   max-width: 100%;
-  height: 61px;
   -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.four-line-text-block-ellipsis  {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.five-line-text-block-ellipsis  {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -58,7 +82,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
 
 .text-overflow {
   overflow: hidden;
-  white-space: nowrap;
+  word-break: break-all;
   text-overflow: ellipsis;
 }
 
@@ -80,23 +104,12 @@ github and jsdeliver. Simply create a free account on github, create a depositor
           display: none;
         }
   
-  /* exact sizes vs fluid container*/
-  ._16x9-960x540 {
-    width: 256px;
-    height: 144px;
-    max-height: none;
-    max-width: none;
-    min-height: 144px;
-    min-width: 256px;
-    object-fit: contain;
-  }
-
   .riveflow-container {
     max-width: 100%;
     min-width: 0px;
   }
 
-  ._2-card-grid-uneven-container-left  {
+  .two-grid-uneven-container-left  {
     max-width: 100%;
     justify-content: center;
     justify-items: center;
@@ -111,7 +124,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     grid-template-rows: auto auto;
   }
 
-  ._2-card-grid-uneven-container-right  {
+   .two-grid-uneven-container-right  {
     max-width: 100%;
     justify-content: stretch;
     align-items: stretch;
@@ -149,23 +162,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     flex-wrap: nowrap;
   }
 
-  ._1-card-grid-center-container-v2 {
-    max-width: 100%;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    justify-content: center;
-    align-items: center;
-    grid-auto-flow: row;
-    grid-column-gap: 16px;
-    grid-template-areas: "Area"
-      "Area-2";
-    grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
-    grid-template-rows: auto;
-  }
-
-  ._1-card-grid-center-container {
+  .one-grid-center-container {
     max-width: 100%;
     margin-right: 0px;
     margin-left: 0px;
@@ -189,7 +186,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     max-width: 590px;
   }
 
-  ._2-card-grid-container-v2 {
+  .two-grid-container {
     max-width: 100%;
     margin-right: 0px;
     margin-left: 0px;
@@ -199,31 +196,11 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     align-items: center;
     align-content: center;
     grid-auto-flow: row;
-    grid-template-areas: "Area"
-      "Area-2"
-      "Area-3"
-      "Area-4";
+    grid-auto-columns: minmax(100px, 462px);
     grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
     grid-template-rows: auto auto auto auto;
   }
   
-  ._2-card-grid-container  {
-    max-width: 100%;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    justify-content: center;
-    align-items: center;
-    grid-auto-flow: row;
-    grid-template-areas: "Area"
-      "Area-2"
-      "Area-3"
-      "Area-4";
-    grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
-    grid-template-rows: auto auto auto auto;
-  }  
-
   .simple-card-container {
     max-width: 100%;
     min-width: 0px;
@@ -234,7 +211,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     min-height: auto;
   }
 
-  ._4-card-mason-grid-container  {
+  .four-card-mason-grid-container  {
     max-width: 100%;
     margin-right: 0px;
     margin-left: 0px;
@@ -290,16 +267,8 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     grid-template-columns: repeat(auto-fit, minmax(100px, 378px));
     grid-template-rows: auto auto auto;
   }
-  
-  .device-icon-container {
-    width: 30%;
-  }
-  
-  .cp-card-text-box {
-    min-height: 43px;
-  }
-  
-  ._4-card-grid-container  {
+
+  .four-card-grid-container {
     max-width: 100%;
     margin-right: 0px;
     margin-left: 0px;
@@ -308,36 +277,22 @@ github and jsdeliver. Simply create a free account on github, create a depositor
     align-items: center;
     align-content: stretch;
     grid-auto-flow: row;
-    grid-template-areas: ".";
     grid-template-columns: repeat(auto-fit, minmax(0px, 378px));
     grid-template-rows: auto auto auto auto;
   }
+  
 
-  .con-ps-card-container {
-    max-width: 100%;
-    min-width: 0px;
-  }
-  
-  
-    
+   
 }
 
 /* tablet - mobile landscape breakpoint 600-899px  webflow style=small */
 @media (min-width: 600px) and (max-width: 899px) {
-  ._16x9-960x540 {
-    width: 426px;
-    height: 240px;
-    max-height: none;
-    max-width: none;
-    min-height: 240px;
-    min-width: 426px;
-  }
 
 .riverflow-left   {
   padding-bottom: 48px;
 }
 
-._2-card-grid-uneven-container-left   {
+.two-grid-uneven-container-left   {
   max-width: none;
   justify-content: center;
   justify-items: center;
@@ -356,7 +311,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   padding-bottom: 48px;
 }
 
-._2-card-grid-uneven-container-right   {
+ .two-grid-uneven-container-right   {
   max-width: none;
   justify-items: center;
   align-items: center;
@@ -412,7 +367,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   width: 100%;
 }
 
-._1-card-grid-center-container-v2 {
+.one-grid-center-container {
   max-width: none;
   justify-content: center;
   justify-items: center;
@@ -425,45 +380,16 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   grid-template-rows: auto;
 }
 
-._1-card-grid-center-container {
-  max-width: none;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  align-self: stretch;
-  grid-template-areas: "."
-    "Area";
-  grid-template-columns: repeat(auto-fit, minmax(200px, 590px));
-  grid-template-rows: auto;
-}
-
-._2-card-grid-container-v2 {
+.two-grid-container {
   max-width: none;
   justify-content: center;
   justify-items: center;
   align-items: stretch;
   align-content: stretch;
   align-self: stretch;
-  grid-template-areas: "Area Area-2"
-    "Area-3 Area-4";
+  grid-auto-columns: minmax(100px, 375px);
   grid-template-columns: minmax(100px, 375px) repeat(auto-fit, minmax(100px, 375px));
   grid-template-rows: auto auto;
-}
-
-._2-card-grid-container   {
-  max-width: none;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  align-self: stretch;
-  grid-template-areas: "Area"
-    "Area-2"
-    "Area-3"
-    "Area-4";
-  grid-template-columns: repeat(auto-fit, minmax(100px, 590px));
-  grid-template-rows: auto auto auto auto;
 }
 
 .simple-card-container {
@@ -477,7 +403,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   min-height: auto;
 }
 
-._4-card-mason-grid-container {
+.four-card-mason-grid-container {
   max-width: none;
   justify-items: stretch;
   align-items: stretch;
@@ -550,26 +476,7 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   grid-template-rows: auto auto;
 }
 
-.comparison-product-card {
-  min-width: auto;
-}
-
-.cp-header-text-container {
-  max-height: 40px;
-  justify-content: flex-start;
-  align-items: center;
-  align-self: center;
-}
-
-.device-icon-container {
-  width: 30%;
-}
-
-.cp-card-text-box {
-  min-height: 65px;
-}
-  
-._4-card-grid-container   {
+.four-card-grid-container:small {
   max-width: none;
   justify-items: center;
   align-items: center;
@@ -578,192 +485,13 @@ github and jsdeliver. Simply create a free account on github, create a depositor
   grid-template-rows: auto auto;
 }
 
-  .con-ps-card-container {
-    min-width: 0px;
-  }
-
+  
 
 }
 
-/* desktop med/tablet breakpoint 900-1199px webflow style-med */
+/* desktop med/tablet breakpoint 900-1199px webflow style-med - Her for use as needed */
 @media (min-width: 900px) and (max-width: 1199px) {
-
-  ._16x9-960x540 {
-    width: 640px;
-    height: 360px;
-    max-height: none;
-    max-width: none;
-    min-height: 360px;
-    min-width: 640px;
-  }
-
-
-  .riverflow-left {
-    padding-top: 0px;
-    padding-bottom: 56px;
-  }
-  
-  ._2-card-grid-uneven-container-left   {
-    justify-content: center;
-    justify-items: stretch;
-    align-content: stretch;
-    grid-auto-flow: row;
-    grid-column-gap: 32px;
-    grid-template-areas: "Area Area-2";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-  
-  .riverflow-right {
-    padding-top: 0px;
-    padding-bottom: 56px;
-  }
-  
-  ._2-card-grid-uneven-container-right   {
-    justify-content: center;
-    justify-items: stretch;
-    align-content: stretch;
-    grid-auto-flow: row;
-    grid-column-gap: 32px;
-    grid-template-areas: "Area Area-3";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-  
-  .hero-cta-background-container   {
-    display: grid;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    grid-auto-columns: 1fr;
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    background-size: auto 90%;
-  }
-  
-  .hero-2-card-grid-uneven-container-simple   {
-    max-width: 83.3%;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    grid-auto-flow: row;
-    grid-template-areas: "Area Area-2";
-    grid-template-columns: 1fr 0.65fr;
-    grid-template-rows: auto;
-  }
-
-  ._1-card-grid-center-container-v2 {
-    justify-content: space-between;
-    justify-items: stretch;
-    align-content: stretch;
-    grid-auto-flow: row;
-    grid-template-areas: "Area"
-      "Area-2";
-    grid-template-columns: minmax(200px, 956px);
-    grid-template-rows: auto auto;
-  }
-  
-  ._1-card-grid-center-container {
-    justify-content: space-between;
-    justify-items: stretch;
-    align-content: stretch;
-    grid-auto-flow: row;
-    grid-template-areas: "Area"
-      "Area-2";
-    grid-template-columns: minmax(200px, 956px);
-    grid-template-rows: auto auto;
-  }
-
-  ._2-card-grid-container-v2 {
-    justify-content: center;
-    justify-items: stretch;
-    align-content: stretch;
-    grid-auto-flow: row;
-    grid-template-columns: minmax(100px, 462px) repeat(auto-fit, minmax(100px, 462px));
-    grid-template-rows: auto auto;
-  }
-
-  ._2-card-grid-container   {
-    justify-content: center;
-    justify-items: stretch;
-    align-content: stretch;
-    grid-auto-flow: row;
-    grid-template-areas: "Area Area-2"
-      "Area-3 Area-4";
-    grid-template-columns: minmax(100px, 462px) repeat(auto-fit, minmax(100px, 462px));
-    grid-template-rows: auto auto;
-  }
-
-  .simple-card-container {
-    min-height: 375px;
-  }
-
-  .simple-img-mask {
-    min-height: auto;
-    max-height: auto;
-  }
-  
-  ._4-card-mason-grid-container   {
-    justify-content: center;
-    justify-items: stretch;
-    align-items: stretch;
-    align-content: stretch;
-    grid-template-areas: "Area Area Area"
-      "Area-2 Area-3 Area-4";
-    grid-template-columns: minmax(100px, 378px) minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
-    grid-template-rows: minmax(0px, 3fr) auto;
-  }
-  
-  .grid-9-3   {
-    grid-template-areas: "Area Area-2";
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-  }
-  
-  .discover-card-container {
-    min-width: auto;
-  }
-
-  .discover-card-hero-img-mask {
-    min-height: 429px;
-  }
-
-  .hero-inner-card-container-mobile {
-    display: none;
 }
 
-.cards_comparison_product {
-  justify-content: center;
-  justify-items: stretch;
-  align-items: stretch;
-  align-content: stretch;
-  grid-auto-flow: row;
-  grid-template-areas: "Area Area-3"
-    "Area-2 .";
-  grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
-  grid-template-rows: auto auto;
-}
-  
-  ._4-card-grid-container   {
-    justify-content: center;
-    grid-template-areas: "Area Area-2"
-      "Area-3 Area-4";
-    grid-template-columns: minmax(100px, 378px) repeat(auto-fit, minmax(100px, 378px));
-    grid-template-rows: auto auto;
-  }  
-  
-
- 
-}
 
 /*END Consonant webflow simplified media queries*/ 
