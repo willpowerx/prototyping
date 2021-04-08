@@ -15,10 +15,6 @@ Consonant based breakpoints:
 1200px - 1440px + Desktop up* (this does not count as a breakpoint/ its just the default view)
 1920px - HD (used only where needed big lean back experiences and 4k up displays needs)
 
-NOTED TO REVIEW
-1440px at this viewport the percent based containers locks. EX 83.3% container size locks at mx width 1200px. (soft breakpoint?) 
-fix this with better css set width % based and then max width allowed boom.. done.
-
 class names will need to be unified later with XD compnonents, so expect audit clean up then.. (in progress)
 if you change anything in webflow you have to update here too or you will get conflicts
 
@@ -87,8 +83,14 @@ github and jsdeliver. Simply create a free account on github, create a depositor
 }
 
 
-
 /*Consonant webflow simplified media queries WIP*/ 
+
+/* container overrides - viewport the percent based containers maxwidth set */
+.con-flex-container {
+  width:83.3%;
+  max-width: 1200px !important;
+}
+
 
 /* phone breakpoint 360-599px webflow style=tiny*/
 @media (max-width: 599px) {
