@@ -689,8 +689,6 @@ solve for order bewteen left and right layouts may need ids for left and right a
   grid-area: Area-2;
   -ms-grid-column-align: center;
   justify-self: center;
-  -ms-grid-column-align: center;
-  justify-self: center;
 }
 
 #marq-med-container-text-right.marquee-standard-med-text-container {
@@ -730,6 +728,8 @@ solve for order bewteen left and right layouts may need ids for left and right a
 }
 
 .marquee-standard-sm-grid {
+  padding-top: 48px;
+  padding-bottom: 48px;
   grid-template-areas: "Area"
     "Area-2";
   grid-template-columns: 1fr;
@@ -739,8 +739,6 @@ solve for order bewteen left and right layouts may need ids for left and right a
 .marquee-standard-sm-text-container {
   max-height: none;
   min-height: auto;
-  padding-top: 48px;
-  padding-bottom: 0px;
   align-self: center;
 }
 
@@ -752,9 +750,16 @@ solve for order bewteen left and right layouts may need ids for left and right a
   max-height: none;
   min-height: auto;
   padding-top: 32px;
-  padding-bottom: 48px;
+  justify-self: start !important;
 }
 
+.marquee-standard-sm-container {
+  max-height: none;
+  min-height: auto;
+  padding-top: 32px;
+  -ms-grid-column-align: center;
+  justify-self: center !important;
+}
 
 
 }
