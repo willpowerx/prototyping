@@ -31,6 +31,28 @@ only need small for most marquees as tablet is the same as mobile
 
 
 
+
+solve for order bewteen left and right layouts may need ids for left and right at grid level...
+
+.marquee-standard-med-grid:small {
+  grid-template-areas: "Area-2"
+    "Area";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+.marquee-standard-med-grid {
+  grid-template-areas: "Area-2"
+    "Area";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+
+
+
+
+
 */
 
 /*temp remove badge*/
@@ -663,6 +685,18 @@ only need small for most marquees as tablet is the same as mobile
   align-self: center;
 }
 
+.marquee_standard_medium_right {
+  max-height: none;
+  min-height: auto;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), @img_606f29c90f208088323d3406, linear-gradient(to bottom, hsla(0, 0.00%, 100.00%, 1.00), hsla(0, 0.00%, 100.00%, 1.00));
+  background-position: 0px 0px, 50% 50%, 0px 0px;
+  background-size: auto, cover, auto;
+}
+
+.marquee_standard_medium_right-cta-bkg {
+  max-height: none;
+  min-height: auto;
+}
 
   
 
