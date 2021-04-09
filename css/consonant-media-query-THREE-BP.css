@@ -740,6 +740,7 @@ solve for order bewteen left and right layouts may need ids for left and right a
   max-height: none;
   min-height: auto;
   align-self: center;
+  grid-area: Area !important;
 }
 
 .marquee-standard-sm-left-cta {
@@ -759,6 +760,7 @@ solve for order bewteen left and right layouts may need ids for left and right a
   padding-top: 32px;
   -ms-grid-column-align: center;
   justify-self: center !important;
+  grid-area: Area-2 !important;
 }
 
 
