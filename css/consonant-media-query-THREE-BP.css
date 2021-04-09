@@ -21,14 +21,14 @@ if you change anything in webflow you have to update here too or you will get co
 can minfy final files or even host via github etc and link in to clean up page load
 github and jsdeliver. Simply create a free account on github, create a depository and upload your file, then reference it with jsdeliver.
 
-
-
+maybe need later
   .con-hide-desktop {
     display: none;
   }
 
 
 only need small for most marquees as tablet is the same as mobile
+
 
 
 */
@@ -608,6 +608,59 @@ only need small for most marquees as tablet is the same as mobile
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   font-size: 1.1em;
+}
+
+/*medium marquee*/
+.marquee_standard_medium_left {
+  max-height: none;
+  min-height: auto;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), @img_606f29c90f208088323d3406, linear-gradient(to bottom, hsla(0, 0.00%, 100.00%, 1.00), hsla(0, 0.00%, 100.00%, 1.00));
+  background-position: 0px 0px, 50% 50%, 0px 0px;
+  background-size: auto, cover, auto;
+}
+
+.marquee_standard_medium_left-cta-bkg {
+  max-height: none;
+  min-height: auto;
+}
+
+.marquee-standard-med-grid {
+  grid-template-areas: "Area-2"
+    "Area";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+.marquee-standard-med-text-container {
+  max-height: none;
+  min-height: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.marquee-standard-med-left-cta {
+  display: flex;
+  max-width: 100%;
+}
+
+.marquee-svg-logo-container {
+  display: flex;
+  order: 1;
+}
+
+.button-wrapper-cta-marquee-standard-med-left {
+  padding-bottom: 56px;
+}
+
+.marquee-standard-med-container {
+  max-height: none;
+  min-height: auto;
+  padding-top: 56px;
+  padding-bottom: 32px;
+}
+
+.marquee-med-img {
+  align-self: center;
 }
 
 
