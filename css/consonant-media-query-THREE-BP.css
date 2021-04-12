@@ -29,15 +29,7 @@ maybe need later
 
 only need small for most marquees as tablet is the same as mobile
 
-
-
-
 solve for order bewteen left and right layouts may need ids for left and right at grid level...
-
-
-
-
-
 
 
 
@@ -324,11 +316,21 @@ solve for order bewteen left and right layouts may need ids for left and right a
   max-height: none;
 }
 
+.marquee-inline-text-container {
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+
+
    
 }
 
 /* tablet - mobile landscape breakpoint 600-899px  webflow style=small */
 @media (min-width: 600px) and (max-width: 899px) {
+
+  .con-hide-tablet: {
+    display: none;
+  }
 
 .riverflow-left   {
   padding-bottom: 48px;
@@ -761,6 +763,25 @@ solve for order bewteen left and right layouts may need ids for left and right a
   -ms-grid-column-align: center;
   justify-self: center !important;
   grid-area: Area-2 !important;
+}
+
+.marquee_inline-container {
+  grid-template-areas: "Area"
+    "Area-2";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+.marquee-inline-text-container {
+  max-height: none;
+  max-width: 100%;
+  min-height: auto;
+  margin-left: 0%;
+  align-self: center;
+}
+
+.marquee-standard-sm-left-cta {
+  max-width: 100%;
 }
 
 
