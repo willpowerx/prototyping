@@ -18,6 +18,21 @@ Consonant based breakpoints:
 class names will need to be unified later with XD compnonents, so expect audit clean up then.. (in progress)
 if you change anything in webflow you have to update here too or you will get conflicts
 
+Here is the key:
+Marquee: mq
+Standard: std
+Quiet: qt
+Inline: in
+Small: sm
+Medium: md
+Large: lg
+Left: lt
+Right: rt
+Center: ctr
+Video: vid
+z-pattern: zpn
+media-block: mdb
+
 can minfy final files or even host via github etc and link in to clean up page load
 github and jsdeliver. Simply create a free account on github, create a depository and upload your file, then reference it with jsdeliver.
 
@@ -31,7 +46,19 @@ only need small for most marquees as tablet is the same as mobile
 
 solve for order bewteen left and right layouts may need ids for left and right at grid level...
 
+can add id to make more specfic - hiding background videos and collapseing the area
 
+.w-background-video>video {
+  display: none;
+  min-height:auto;
+  max-height:none;
+}
+
+  .w-background-video {
+  display: none;
+  min-height:auto;
+  max-height:none;
+  }
 
 
 */
@@ -331,7 +358,12 @@ solve for order bewteen left and right layouts may need ids for left and right a
   .con-hide-tablet: {
     display: none;
   }
-
+  
+/*video id to hide on tablet/mobile */
+  #marquee-video {
+    display: none;
+  }
+  
 .riverflow-left   {
   padding-bottom: 48px;
 }
