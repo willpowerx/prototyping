@@ -61,6 +61,7 @@ can add id to make more specfic - hiding background videos and collapseing the a
   }
 
 
+
 */
 
 /*temp remove badge*/
@@ -232,6 +233,17 @@ can add id to make more specfic - hiding background videos and collapseing the a
     grid-auto-columns: minmax(100px, 462px);
     grid-template-columns: repeat(auto-fit, minmax(100px, 462px));
     grid-template-rows: auto auto auto auto;
+  }
+
+  .two-grid-card-flex-cm:tiny {
+    justify-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+    align-content: center;
+    grid-auto-columns: minmax(300px, 1fr);
+    grid-template-areas: ".";
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
   }
   
   .simple-card-container {
